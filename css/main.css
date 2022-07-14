@@ -645,6 +645,8 @@ summary {
           align-items: center;
   z-index: 1;
   background: #E17992;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .menu.is-open {
   display: -webkit-box;
@@ -654,6 +656,16 @@ summary {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media screen and (max-height: 500px) {
+  .menu.is-open {
+    padding-top: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu.is-open {
+    width: 254px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .menu.is-open {
@@ -711,13 +723,20 @@ summary {
   color: #d41443;
 }
 
+.nav__icon-menu {
+  fill: #d41443;
+}
+.nav__icon-cross {
+  fill: #ffffff;
+}
 .nav__button {
   padding: 0;
   border: none;
   background-color: transparent;
   z-index: 2;
   position: absolute;
-  right: 10px;
+  right: 20px;
+  top: 20px;
 }
 @media screen and (min-width: 1200px) {
   .nav__button {
