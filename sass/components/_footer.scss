@@ -20,16 +20,13 @@
   background-color: #fff5f6;
   
   &__container {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   
 
     @media screen and (min-width: 768px) {
-      // // display: flex;
-      // // flex-wrap: wrap;
-      // justify-content: space-between;
-      // align-items: flex-start;
+      flex-direction: row;
     }
 
     @media screen and (min-width: 1200px) {
@@ -37,9 +34,8 @@
     //   align-items: baseline;
     //   justify-content: space-between;
     }
-
   }
-
+  
   &__text-1 {
     font-family: 'Titan One';
     font-style: normal;
@@ -154,7 +150,7 @@
   &__list {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 
 
     // @media screen and (min-width: 1200px) {
@@ -185,12 +181,14 @@
     margin-top: 40px;
     margin-bottom: 3px;
     padding-top: 16px;
-
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media screen and (min-width: 768px) {
       padding-top: 8px;
+      flex-direction: row;
     }
-
   }
 }
